@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/stylesheet.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("17Djd38_eKplM91qC");
+      })();
+      function sendmail() {
+        let fullname = document.getElementById("name").value;
+        let userEmail = document.getElementById("email").value;
+        let userMessage = document.getElementById("message").value;
+
+        let contactParams = {
+          from_name: fullname,
+          from_email: userEmail,
+          message: userMessage,
+        };
+        emailjs
+          .send("service_AgohigeTech", "template_AgohigeTech", contactParams)
+          .then(
+            function (response) {
+              console.log("SUCCESS!", response.status, response.text);
+            },
+            function (error) {
+              console.log("FAILED...", error);
+            }
+          );
+      }
+    </script>
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <div class:form-group>
+        <label for="fname">Full Name :</label>
+        <input
+          class="form-control"
+          type="text"
+          id="name"
+          name="fullname"
+          placeholder="Your full name..."
+        />
+
+        <label for="email">Email :</label>
+        <input
+          class="form-control"
+          type="text"
+          id="email"
+          name="email"
+          placeholder="Your email..."
+        />
+
+        <label for="message">Message :</label>
+        <textarea
+          class="form-control textarea"
+          id="message"
+          rows="3"
+          placeholder="Your message..."
+        ></textarea>
+        <div
+          class="g-recaptcha"
+          data-sitekey="6LfQaykfAAAAABhvImGJq5svA3Oykv7UQzTeDVyL"
+        ></div>
+
+        <button onclick="sendmail()" type="button" class="">Send</button>
+      </div>
+    </form>
+  </body>
+</html>

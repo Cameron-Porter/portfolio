@@ -83,6 +83,8 @@ body {
   --primary: rgb(79, 85, 91);
   --secondary: rgb(43, 45, 47);
   --accent: rgba(92, 168, 255, 0.7);
+  --accent2: rgb(255, 251, 0);
+  --accent3: orange;
   --color1: rgb(255, 255, 255);
   --color2: rgb(0, 0, 0);
   --dayTime: linear-gradient(to right bottom, orange, yellow);
@@ -90,12 +92,15 @@ body {
   margin: 0;
   padding: 0;
   font-size: 16px;
+  font-family: "Nanum Myeongjo", serif;
 }
 
 .light-mode {
   --primary: rgb(250, 249, 246);
   --secondary: rgb(255, 255, 255);
   --accent: rgba(92, 168, 255, 0.7);
+  --accent2: blue;
+  --accent3: rgb(0, 0, 0);
   --color1: rgb(0, 0, 0);
   --color2: rgb(255, 255, 255);
   --dayTime: linear-gradient(to right bottom, black, blue);
@@ -108,8 +113,9 @@ a,
 p {
   color: var(--color1);
 }
-svg {
-  stroke: var(--color1);
+svg text,
+svg polygon {
+  stroke: var(--accent2);
 }
 
 /******************
@@ -122,13 +128,19 @@ svg {
   align-items: center;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+  padding-top: 0.5rem;
 }
-.logo {
-  font-size: 1.5rem;
+.logo svg {
+  height: 5rem;
+  width: 5rem;
+}
+.navLinks {
+  display: flex;
+  flex-direction: row;
 }
 .navLinks li {
   list-style: none;
-  display: inline-block;
+  display: flex;
   padding: 0.5rem;
 }
 .header > div > a,
@@ -145,7 +157,14 @@ svg {
   color: var(--color1);
   border: none;
 }
-.header > div > a:hover,
+.logo svg text:hover {
+  stroke: var(--color2);
+  fill: var(--color2);
+}
+.logo svg polygon:hover {
+  fill: url(#RadialGradient1);
+  stroke: var(--accent3);
+}
 .navLinks a:hover {
   background-color: var(--accent);
   color: var(--color2);
