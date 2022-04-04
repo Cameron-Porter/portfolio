@@ -204,6 +204,12 @@ svg polygon {
 .aboutButtons a {
   text-decoration: none;
 }
+.hangul {
+  color: var(--accent2);
+}
+.hangul:hover {
+  color: var(--accent);
+}
 .aboutButton {
   margin-left: 3rem;
   padding: 0.3rem;
@@ -248,9 +254,7 @@ svg polygon {
 ******************/
 .about {
   background-color: var(--secondary);
-  padding: 2rem;
-  padding-left: 4rem;
-  padding-bottom: 4rem;
+  padding: 2rem 4rem 4rem 4rem;
 }
 #aboutMe p:first-child {
   margin-top: 6rem;
@@ -273,9 +277,7 @@ svg polygon {
 ******************/
 #skills {
   background-color: var(--primary);
-  padding: 2rem;
-  padding-left: 4rem;
-  padding-bottom: 4rem;
+  padding: 2rem 4rem 4rem 4rem;
   width: 100%;
 }
 #skills p:first-child {
@@ -334,9 +336,7 @@ svg polygon {
 ******************/
 #work {
   background-color: var(--secondary);
-  padding: 2rem;
-  padding-left: 4rem;
-  padding-bottom: 4rem;
+  padding: 2rem 4rem 4rem 4rem;
 }
 #work p:first-child {
   margin-top: 2rem;
@@ -483,6 +483,7 @@ svg polygon {
   display: flex;
   flex-direction: column;
   padding-bottom: 1rem;
+  background-color: var(--secondary);
 }
 
 .socialIcons {
@@ -632,9 +633,7 @@ form div button {
 
 #contact {
   background-color: var(--primary);
-  padding: 2rem;
-  padding-left: 4rem;
-  padding-bottom: 4rem;
+  padding: 2rem 4rem 4rem 4rem;
   width: 100%;
 }
 #contact > p:first-child {
