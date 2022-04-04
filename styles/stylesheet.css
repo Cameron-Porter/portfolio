@@ -162,7 +162,6 @@ svg polygon {
   fill: var(--color2);
 }
 .logo svg polygon:hover {
-  fill: url(#RadialGradient1);
   stroke: var(--accent3);
 }
 .navLinks a:hover {
@@ -187,9 +186,22 @@ svg polygon {
   width: 60%;
   padding-left: 2rem;
 }
-.aboutButtons button {
-  margin-left: 3rem;
+.aboutButtons {
+  margin-top: 20px;
 }
+.aboutButtons a {
+  text-decoration: none;
+}
+.aboutButtons a:last-child {
+  margin-left: 3rem;
+  padding: 0.3rem;
+  width: 110px;
+  border-radius: 15px;
+  color: var(--color2);
+  background-color: var(--accent);
+  border: none;
+}
+
 .me {
   align-self: flex-end;
   align-items: bottom;
@@ -240,6 +252,7 @@ h4 {
   margin-left: auto;
   margin-right: auto;
   padding: 0;
+  width: 400px;
 }
 .socialIcons li {
   display: inline-block;
@@ -275,4 +288,68 @@ h4 {
   h1 {
     font-size: 1.75rem;
   }
+}
+
+/******************
+   Contact Form
+******************/
+
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+}
+form div {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+  width: 50%;
+  padding: 10px;
+}
+form div label {
+  color: var(--color1);
+  transform: translate(5px, 30px);
+  transition: all 0.4s ease-in-out;
+  font-size: 1.2rem;
+}
+.is-active {
+  transform: translate(0);
+  font-size: 1rem;
+}
+form div input,
+form div textarea {
+  margin-top: 5px;
+  margin-bottom: 15px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 4px solid var(--accent2);
+  color: var(--color1);
+  z-index: 1;
+}
+form div input:focus,
+form div textarea:focus {
+  outline: none;
+}
+
+form div button {
+  margin-top: 10px;
+  width: 100px;
+  border-radius: 15px;
+  align-self: center;
+  color: var(--color2);
+  background-color: var(--accent);
+  border: none;
+}
+.status {
+  color: var(--color1);
+  align-self: center;
+  margin-top: 5px;
+  text-align: center;
 }
