@@ -584,6 +584,7 @@ svg polygon {
   justify-content: center;
   align-items: center;
   width: 40rem;
+  margin-top: 2rem;
 }
 
 form {
