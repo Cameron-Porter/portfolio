@@ -265,6 +265,9 @@ svg polygon {
   text-align: center;
   border-radius: 0 30%;
 }
+#aboutMe p:not(:first-child) {
+  margin-bottom: 2rem;
+}
 #aboutMe h2 {
   margin-top: 3rem;
   font-size: 2.75rem;
@@ -312,7 +315,9 @@ svg polygon {
   align-items: center;
 }
 .frontend:hover,
-.backend:hover {
+.backend:hover,
+.frontend:focus,
+.backend:focus {
   transform: translate(-0.25rem, -0.25rem);
   box-shadow: 4px 4px 0 var(--accent2);
 }
@@ -477,6 +482,56 @@ svg polygon {
   }
 }
 /******************
+      Contact
+******************/
+
+#contact {
+  background-color: var(--primary);
+  padding: 2rem 4rem 4rem 4rem;
+  width: 100%;
+}
+#contact > p:first-child {
+  margin-top: 2rem;
+  background-color: var(--accent);
+  color: var(--color2);
+  width: 9rem;
+  padding: 3px;
+  text-align: center;
+  border-radius: 0 30%;
+}
+#contact h2 {
+  margin-top: 3rem;
+  font-size: 2.75rem;
+  margin-bottom: 2rem;
+}
+.contactContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contactContent ul {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.contactContent ul li {
+  color: var(--accent2);
+}
+.contactContent a {
+  margin-top: 3rem;
+  padding: 0.3rem;
+  width: 110px;
+  border-radius: 15px;
+  color: var(--color2);
+  background-color: var(--accent);
+  border: none;
+  text-align: center;
+  text-decoration: none;
+}
+.contactContent a:hover {
+  background-color: var(--accent2);
+}
+/******************
        Footer
 ******************/
 .footer {
@@ -551,9 +606,9 @@ svg polygon {
   }
 }
 
-/******************
-   Contact Form
-******************/
+/**********************************************
+                 Contact Form
+**********************************************/
 
 .heading {
   width: 100%;
@@ -628,52 +683,4 @@ form div button {
   align-self: center;
   margin-top: 5px;
   text-align: center;
-}
-/* Contact */
-
-#contact {
-  background-color: var(--primary);
-  padding: 2rem 4rem 4rem 4rem;
-  width: 100%;
-}
-#contact > p:first-child {
-  margin-top: 2rem;
-  background-color: var(--accent);
-  color: var(--color2);
-  width: 9rem;
-  padding: 3px;
-  text-align: center;
-  border-radius: 0 30%;
-}
-#contact h2 {
-  margin-top: 3rem;
-  font-size: 2.75rem;
-  margin-bottom: 2rem;
-}
-.contactContent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.contactContent ul {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-.contactContent ul li {
-  color: var(--accent2);
-}
-.contactContent a {
-  margin-top: 3rem;
-  padding: 0.3rem;
-  width: 110px;
-  border-radius: 15px;
-  color: var(--color2);
-  background-color: var(--accent);
-  border: none;
-  text-align: center;
-  text-decoration: none;
-}
-.contactContent a:hover {
-  background-color: var(--accent2);
 }
