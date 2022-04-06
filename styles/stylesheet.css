@@ -150,13 +150,16 @@ svg polygon {
   color: var(--color1);
   padding: 0.5rem;
 }
-.navLinks > li > button {
+.light {
   border-radius: 50%;
   height: 2.25rem;
   width: 2.25rem;
   background-image: var(--dayTime);
   color: var(--color1);
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .logo svg text:hover {
   stroke: var(--color2);
