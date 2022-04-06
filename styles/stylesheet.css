@@ -541,7 +541,11 @@ svg polygon {
   padding-bottom: 1rem;
   background-color: var(--secondary);
 }
-
+.shortScreen {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
 .socialIcons {
   justify-content: center;
   margin-left: auto;
