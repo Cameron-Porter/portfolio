@@ -31,7 +31,7 @@
     <title>교제</title>
   </head>
   <!-- The Nitty Gritty -->
-  <body>
+  <body onload="setTheme()">
     <header class="header">
       <div>
         <a href="index.html" class="logo"
@@ -78,9 +78,14 @@
       <nav>
         <ul class="navLinks">
           <li>
-            <button onclick="lightMode()">
-              <i id="lightMode" class="fa fa-moon"></i>
-            </button>
+            <a
+              onclick="lightMode()"
+              tabindex="0"
+              name="Light Mode"
+              class="light"
+            >
+              <i id="lightIcon" class="fa fa-sun"></i>
+            </a>
           </li>
           <li><a href="about.html" class="">에 대한</a></li>
           <li><a href="contact.html">교제</a></li>
