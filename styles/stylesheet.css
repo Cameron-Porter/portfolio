@@ -88,6 +88,7 @@ body {
   --color1: rgb(255, 255, 255);
   --color2: rgb(0, 0, 0);
   --dayTime: linear-gradient(to right bottom, orange, yellow);
+  --moon: rgb(0, 0, 0);
   background-color: var(--primary);
   margin: 0;
   padding: 0;
@@ -104,6 +105,7 @@ body {
   --color1: rgb(0, 0, 0);
   --color2: rgb(255, 255, 255);
   --dayTime: linear-gradient(to right bottom, black, blue);
+  --moon: rgb(255, 255, 255);
 }
 h1,
 h2,
@@ -173,8 +175,8 @@ svg polygon {
   color: var(--color2);
   border-radius: 0 30%;
 }
-#lightMode {
-  color: white;
+#lightIcon {
+  color: var(--moon);
 }
 /******************
        Hero
