@@ -99,7 +99,7 @@ body {
 .light-mode {
   --primary: rgb(250, 249, 246);
   --secondary: rgb(255, 255, 255);
-  --accent: rgba(92, 168, 255, 0.7);
+  --accent: rgba(92, 168, 255, 0.9);
   --accent2: blue;
   --accent3: rgb(0, 0, 0);
   --color1: rgb(0, 0, 0);
@@ -162,12 +162,13 @@ svg polygon {
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 1px 1px 5px black;
 }
-.logo svg text:hover {
+.logo > svg > text:hover {
   stroke: var(--color2);
   fill: var(--color2);
 }
-.logo svg polygon:hover {
+.logo > svg > polygon:hover {
   stroke: var(--accent3);
 }
 .navLinks a:hover {
@@ -184,13 +185,15 @@ svg polygon {
 .hero {
   display: inline-flex;
   flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
   width: 100%;
-  height: 510px;
-  padding: 2rem;
+  height: 80vh;
+  padding: 2rem 2rem 2rem 6rem;
 }
 .hero > div:first-child {
   width: 60%;
-  padding-left: 2rem;
+  padding-left: 1rem;
 }
 .hero div p:first-child {
   background-color: var(--accent);
@@ -200,9 +203,29 @@ svg polygon {
   text-align: center;
   border-radius: 0 30%;
 }
-.hero div h1 {
-  margin-top: 3rem;
-  margin-bottom: 2rem;
+.hero > div > h2 {
+  font-size: 5rem;
+  margin-top: 2rem;
+  margin-bottom: -1rem;
+}
+.name {
+  display: flex;
+  align-items: center;
+}
+.vert {
+  writing-mode: vertical-lr;
+  text-orientation: sideways-right;
+  transform: rotate(0.5turn);
+  font-size: 1.3rem;
+  margin-bottom: 0.4rem;
+}
+.intro {
+  font-size: 9rem;
+  margin-left: -1.4rem;
+}
+.desc {
+  font-size: 1.75rem;
+  font-weight: 800;
 }
 .aboutButtons {
   margin-top: 20px;
@@ -230,31 +253,57 @@ svg polygon {
 }
 
 .me {
-  align-self: flex-end;
-  align-items: bottom;
-  justify-content: end;
-  width: 40%;
-  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  width: 80%;
 }
-.me > img {
-  max-height: 100%;
-  width: auto;
-  object-fit: contain;
-  margin-bottom: -6vh;
+
+.svg1,
+.svg3,
+.svg5 {
+  transform: translatey(7rem);
+  width: 100%;
 }
+.svg2,
+.svg4 {
+  transform: translatey(-6rem);
+  margin: 0 -7rem;
+  width: 100%;
+}
+
 @media (max-width: 527px) {
   .hero > div:first-child {
     width: auto;
   }
-  .me {
+  .svg1 {
+    transform: translatey(0);
+    margin-top: 3rem;
+  }
+  .svg2,
+  .svg3,
+  .svg4,
+  .svg5 {
     display: none;
   }
-}
-@media (max-height: 490px) {
-  .me {
-    display: none;
+  .hero {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    height: fit-content;
+  }
+  .intro {
+    font-size: 7rem;
+    margin-left: -0.9rem;
+  }
+  .intro-kr {
+    font-size: 3.5rem;
+  }
+  .vert {
+    font-size: 0.95rem;
+    color: var(--accent2);
   }
 }
+
 /******************
        About
 ******************/
@@ -263,7 +312,7 @@ svg polygon {
   padding: 2rem 4rem 4rem 4rem;
 }
 #aboutMe p:first-child {
-  margin-top: 6rem;
+  margin-top: 2rem;
   background-color: var(--accent);
   color: var(--color2);
   width: 8rem;
@@ -422,7 +471,7 @@ svg polygon {
   width: 0;
   z-index: 1;
   right: 30px;
-  border: medium solid white;
+  border: medium solid var(--primary);
   border-width: 10px 0 10px 10px;
   border-color: transparent transparent transparent var(--primary);
 }
@@ -436,7 +485,7 @@ svg polygon {
   width: 0;
   z-index: 1;
   left: 30px;
-  border: medium solid white;
+  border: medium solid var(--primary);
   border-width: 10px 10px 10px 0;
   border-color: transparent var(--primary) transparent transparent;
 }
@@ -471,9 +520,9 @@ svg polygon {
   /* Make sure that all arrows are pointing leftwards */
   .container::before {
     left: 60px;
-    border: medium solid white;
+    border: medium solid var(--primary);
     border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
+    border-color: transparent var(--primary) transparent transparent;
   }
 
   /* Make sure all circles are at the same spot */
@@ -569,7 +618,7 @@ svg polygon {
   stroke: var(--color1);
 }
 .socialIcons li a svg:hover {
-  stroke: var(--accent);
+  stroke: var(--accent2);
 }
 .footer div {
   margin-left: auto;
@@ -657,24 +706,12 @@ form div button {
 }
 
 @media (max-width: 1350px) {
-  h1 {
-    font-size: 4rem;
-  }
 }
 @media (min-width: 1150px) {
-  h1 {
-    font-size: 3.5rem;
-  }
 }
 @media (max-width: 1150px) {
-  h1 {
-    font-size: 3rem;
-  }
 }
 @media (max-width: 820px) {
-  h1 {
-    font-size: 2.5rem;
-  }
   .skillOptions {
     flex-direction: column;
   }
@@ -693,14 +730,8 @@ form div button {
   }
 }
 @media (max-width: 704px) {
-  h1 {
-    font-size: 2rem;
-  }
 }
 @media (max-width: 586px) {
-  h1 {
-    font-size: 1.75rem;
-  }
   form div {
     width: 100%;
   }
