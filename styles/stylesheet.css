@@ -567,6 +567,8 @@ svg polygon {
   flex-direction: column;
   padding-bottom: 1rem;
   background-color: var(--secondary);
+  justify-content: center;
+  align-items: center;
 }
 .shortScreen {
   position: relative;
@@ -574,10 +576,10 @@ svg polygon {
   width: 100%;
 }
 .socialIcons {
+  display: flex;
   justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0;
+  align-items: center;
+  flex-direction: row;
   width: 400px;
 }
 .socialIcons li {
@@ -586,6 +588,7 @@ svg polygon {
   width: 2rem;
   list-style: none;
   margin: 0 3rem;
+  padding-left: 0;
 }
 .socialIcons li a svg {
   stroke: var(--color1);
@@ -805,6 +808,13 @@ form div button {
   .intro {
     font-size: 6rem;
   }
+  .intro-kr {
+    font-size: 7rem;
+  }
+  .vert-kr {
+    font-size: 1.7rem;
+    transform: translate(1.9rem, -0.9rem);
+  }
   .hero {
     padding: 1rem;
   }
@@ -824,7 +834,18 @@ form div button {
     display: none;
   }
   .intro {
-    font-size: 6rem;
+    font-size: 9rem;
+    transform: translateX(-0.5rem);
+  }
+  .vert {
+    font-size: 1.2rem;
+  }
+  .intro-kr {
+    font-size: 10rem;
+  }
+  .vert-kr {
+    font-size: 2.3rem;
+    transform: translate(2.8rem, -1.2rem);
   }
   .hero {
     padding: 1rem;
@@ -843,7 +864,18 @@ form div button {
     justify-self: center;
   }
   .intro {
-    font-size: 6rem;
+    font-size: 12rem;
+    transform: translateX(-1rem);
+  }
+  .vert {
+    font-size: 1.7rem;
+  }
+  .intro-kr {
+    font-size: 11rem;
+  }
+  .vert-kr {
+    font-size: 2.7rem;
+    transform: translate(2.9rem, -1.4rem);
   }
   .hero {
     padding: 1rem;
