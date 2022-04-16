@@ -195,7 +195,7 @@ svg polygon {
   width: 60%;
   padding-left: 1rem;
 }
-.hero div p:first-child {
+.preIntro {
   background-color: var(--accent);
   color: var(--color2);
   width: 8rem;
@@ -302,6 +302,13 @@ svg polygon {
 }
 .aboutMeLink {
   color: var(--accent2);
+}
+.hero-about {
+  margin-top: 3rem;
+}
+video {
+  width: 100%;
+  margin-top: 1rem;
 }
 /******************
        Skills
@@ -581,6 +588,7 @@ svg polygon {
   align-items: center;
   flex-direction: row;
   width: 400px;
+  padding-left: 0;
 }
 .socialIcons li {
   display: inline-block;
@@ -588,7 +596,6 @@ svg polygon {
   width: 2rem;
   list-style: none;
   margin: 0 3rem;
-  padding-left: 0;
 }
 .socialIcons li a svg {
   stroke: var(--color1);
@@ -703,7 +710,6 @@ form div button {
     width: 100%;
   }
   .hero-about {
-    height: 80vh;
     margin-top: 4rem;
     margin-bottom: 2rem;
   }
@@ -880,4 +886,69 @@ form div button {
   .hero {
     padding: 1rem;
   }
+}
+
+/**********************
+       About Page
+**********************/
+.about-hero {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin: 2rem 0 0 1rem;
+}
+.about-pics {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 20vh;
+  margin: 2rem 0;
+}
+.about-pics svg {
+  width: 20%;
+}
+.svg6,
+.svg8,
+.svg10 {
+  transform: translateY(-2rem);
+}
+.svg7,
+.svg9 {
+  transform: translateY(2rem);
+  margin: 0 -0.5rem;
+}
+.blahblah {
+  margin: 1rem;
+}
+.blahblah div {
+  margin: 1rem 0;
+  justify-content: center;
+  align-items: center;
+}
+.heart,
+.century,
+.anime {
+  display: flex;
+  height: auto;
+  justify-content: center;
+}
+.heart > p {
+  width: 60%;
+}
+.anime > p {
+  width: 60%;
+}
+.svg11 {
+  width: 40%;
+  padding: 0.5rem;
+}
+.svg12 {
+  width: 40%;
+  padding: 0.5rem;
+}
+.projects {
+  margin: 1rem;
+}
+.project-title > p {
+  margin-top: 1rem;
 }
