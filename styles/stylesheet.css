@@ -1026,7 +1026,10 @@ ul {
 .submenu {
   display: none;
   background: var(--primary);
+  padding: 1rem;
+  border: 1rem solid var(--secondary);
 }
-.submenu li {
-  border-bottom: 1px solid var(--primary);
+.submenu a {
+  color: var(--accent2);
+  padding-top: 1rem;
 }
