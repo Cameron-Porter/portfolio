@@ -312,6 +312,88 @@
             this page.
           </p>
         </div>
+        <ul id="accordion" class="accordion">
+          <li>
+            <div class="link">
+              <i>⚔️</i>Text-Based RPG<i class="fa fa-chevron-down"></i>
+            </div>
+            <ul class="submenu">
+              <p>Stuff about the project</p>
+              <video
+                controls="controls"
+                width="100%"
+                max-width="100%"
+                name="Text-based RPG"
+              >
+                <source src="/videos/text.mov" />
+              </video>
+            </ul>
+          </li>
+          <li>
+            <div class="link">
+              <i>🚀</i>Shmup<i class="fa fa-chevron-down"></i>
+            </div>
+            <ul class="submenu">
+              <p>Stuff about the project</p>
+              <video
+                controls="controls"
+                width="100%"
+                max-width="100%"
+                name="Shmup"
+              >
+                <source src="/videos/shmup.mov" />
+              </video>
+            </ul>
+          </li>
+          <li>
+            <div class="link">
+              <i>📇</i>Contact Manager<i class="fa fa-chevron-down"></i>
+            </div>
+            <ul class="submenu">
+              <p>Stuff about the project</p>
+              <video
+                controls="controls"
+                width="100%"
+                max-width="100%"
+                name="Contact manager"
+              >
+                <source src="/videos/contact.mov" />
+              </video>
+            </ul>
+          </li>
+          <li>
+            <div class="link">
+              <i>🎬</i>Netflix Clone<i class="fa fa-chevron-down"></i>
+            </div>
+            <ul class="submenu">
+              <p>Stuff about the project</p>
+              <video
+                controls="controls"
+                width="100%"
+                max-width="100%"
+                name="Netflix clone"
+              >
+                <source src="/videos/netflix.mov" />
+              </video>
+            </ul>
+          </li>
+          <li>
+            <div class="link">
+              <i>🧝‍♂️</i>Funimation Clone<i class="fa fa-chevron-down"></i>
+            </div>
+            <ul class="submenu">
+              <p>Stuff about the project</p>
+              <video
+                controls="controls"
+                width="100%"
+                max-width="100%"
+                name="Funimation Clone"
+              >
+                <source src="/videos/funimation.mov" />
+              </video>
+            </ul>
+          </li>
+        </ul>
       </section>
       <footer class="footer shortScreen">
         <ul class="socialIcons">
@@ -362,9 +444,45 @@
           </li>
         </ul>
         <div>
-          <p>Copyright © 2021 Cameron Porter</p>
+          <p>Copyright © 2022 Cameron Porter</p>
         </div>
       </footer>
     </main>
+    <script>
+      $(function () {
+        var Accordion = function (el, multiple) {
+          this.el = el || {};
+          this.multiple = multiple || false;
+
+          var links = this.el.find(".link");
+
+          links.on(
+            "click",
+            { el: this.el, multiple: this.multiple },
+            this.dropdown
+          );
+        };
+
+        Accordion.prototype.dropdown = function (e) {
+          var $el = e.data.el;
+          ($this = $(this)), ($next = $this.next());
+
+          $next.slideToggle();
+          $this.parent().toggleClass("open");
+
+          if (!e.data.multiple) {
+            $el
+              .find(".submenu")
+              .not($next)
+              .slideUp()
+              .parent()
+              .removeClass("open");
+          }
+        };
+
+        var accordion = new Accordion($("#accordion"), false);
+        // Using dropdown from https://codepen.io/fainder/pen/qBwBeO with minor tweaks.
+      });
+    </script>
   </body>
 </html>

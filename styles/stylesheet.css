@@ -952,3 +952,81 @@ form div button {
 .project-title > p {
   margin-top: 1rem;
 }
+/*******************
+      Projects
+*******************/
+ul,
+li {
+  list-style: none;
+}
+ul {
+  padding: 0;
+}
+.accordion {
+  width: 100%;
+  background: var(--secondary);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.accordion .link {
+  cursor: pointer;
+  display: block;
+  padding: 1rem 1rem 1rem 3rem;
+  color: var(--accent2);
+  font-size: 1rem;
+  font-weight: 700;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.accordion li:last-child .link {
+  border-bottom: 0;
+}
+
+.accordion li i {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1.2rem;
+  color: var(--accent2);
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.accordion li i.fa-chevron-down {
+  right: 1rem;
+  left: auto;
+}
+
+.accordion li.open .link {
+  color: var(--accent3);
+}
+
+.accordion li.open i {
+  color: var(--accent3);
+}
+
+.accordion li.open i.fa-chevron-down {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/*******************
+      Submenu
+*******************/
+
+.submenu {
+  display: none;
+  background: var(--primary);
+}
+.submenu li {
+  border-bottom: 1px solid var(--primary);
+}
