@@ -1018,6 +1018,9 @@ Media Queries
     width: 20%;
     padding: 0.5rem;
   }
+  .blahblah {
+    margin-top: 2rem;
+  }
   .accordion {
     width: 60%;
     margin: 2rem auto;
