@@ -1022,6 +1022,9 @@ Media Queries
     width: 60%;
     margin: 2rem auto;
   }
+  section {
+    padding: 0 2rem;
+  }
 }
 @media (min-width: 1150px) {
   .svg1,
@@ -1066,6 +1069,9 @@ Media Queries
   }
   .project-title > h2 {
     font-size: 3rem;
+  }
+  section {
+    padding: 0 3rem;
   }
 }
 @media (min-width: 1350px) {
