@@ -688,206 +688,6 @@ form div button {
   text-align: center;
 }
 
-@media (max-width: 703px) {
-  .skillOptions {
-    flex-direction: column;
-  }
-  .frontend,
-  .backend {
-    width: 100%;
-  }
-  .backend {
-    margin-top: 1.5rem;
-  }
-  .hero {
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    align-items: flex-start;
-    margin-top: 2rem;
-  }
-  .hero > div:first-child {
-    width: 100%;
-  }
-  .hero-about {
-    margin-top: 4rem;
-    margin-bottom: 2rem;
-  }
-  .intro {
-    font-size: 7rem;
-    margin-left: -0.9rem;
-  }
-  .name {
-    align-items: left;
-  }
-  .iam,
-  .intro-kr {
-    font-size: 7rem;
-  }
-  .vert {
-    font-size: 0.95rem;
-  }
-  .vert-kr {
-    font-size: 2rem;
-  }
-  .me {
-    align-self: center;
-  }
-  .svg1 {
-    display: flex;
-    width: 70%;
-    transform: translate(0);
-    margin: 2rem 0;
-  }
-  .svg2,
-  .svg3,
-  .svg4,
-  .svg5 {
-    display: none;
-  }
-  form div {
-    width: 100%;
-  }
-  .intro-about {
-    font-size: 3rem;
-    margin: 2rem 1rem;
-  }
-  .desc-about {
-    font-size: 2rem;
-    margin: 0 1rem;
-    padding-bottom: 2rem;
-    color: var(--accent2);
-  }
-}
-@media (min-width: 704px) {
-  .svg1,
-  .svg2 {
-    display: flex;
-    width: 50%;
-    height: 50%;
-    align-self: center;
-    justify-self: center;
-  }
-  .svg3,
-  .svg4,
-  .svg5 {
-    display: none;
-  }
-  .intro {
-    font-size: 6rem;
-    margin-left: -0.8rem;
-  }
-  .intro-kr {
-    font-size: 5rem;
-  }
-  .vert {
-    font-size: 0.75rem;
-  }
-  .vert-kr {
-    font-size: 1.3rem;
-    transform: translate(1.3rem, -0.6rem);
-  }
-  .hero {
-    padding: 1rem;
-  }
-}
-@media (min-width: 820px) {
-  .heading {
-    margin-top: 3rem;
-  }
-  form div {
-    width: 80%;
-  }
-  .svg1,
-  .svg2,
-  .svg3 {
-    display: flex;
-    width: 50%;
-    height: 50%;
-    align-self: center;
-    justify-self: center;
-  }
-  .svg4,
-  .svg5 {
-    display: none;
-  }
-  .intro {
-    font-size: 6rem;
-  }
-  .intro-kr {
-    font-size: 7rem;
-  }
-  .vert-kr {
-    font-size: 1.7rem;
-    transform: translate(1.9rem, -0.9rem);
-  }
-  .hero {
-    padding: 1rem;
-  }
-}
-@media (min-width: 1150px) {
-  .svg1,
-  .svg2,
-  .svg3,
-  .svg4 {
-    display: flex;
-    width: 30%;
-    height: 50%;
-    align-self: center;
-    justify-self: center;
-  }
-  .svg5 {
-    display: none;
-  }
-  .intro {
-    font-size: 9rem;
-    transform: translateX(-0.5rem);
-  }
-  .vert {
-    font-size: 1.2rem;
-  }
-  .intro-kr {
-    font-size: 10rem;
-  }
-  .vert-kr {
-    font-size: 2.3rem;
-    transform: translate(2.8rem, -1.2rem);
-  }
-  .hero {
-    padding: 1rem;
-  }
-}
-@media (min-width: 1350px) {
-  .svg1,
-  .svg2,
-  .svg3,
-  .svg4,
-  .svg5 {
-    display: flex;
-    width: 50%;
-    height: 50%;
-    align-self: center;
-    justify-self: center;
-  }
-  .intro {
-    font-size: 12rem;
-    transform: translateX(-1rem);
-  }
-  .vert {
-    font-size: 1.7rem;
-  }
-  .intro-kr {
-    font-size: 11rem;
-  }
-  .vert-kr {
-    font-size: 2.7rem;
-    transform: translate(2.9rem, -1.4rem);
-  }
-  .hero {
-    padding: 1rem;
-  }
-}
-
 /**********************
        About Page
 **********************/
@@ -896,6 +696,10 @@ form div button {
   flex-direction: column;
   height: auto;
   margin: 2rem 0 0 1rem;
+  align-items: center;
+}
+.about-hero > div > h1 {
+  font-size: 2rem;
 }
 .about-pics {
   display: flex;
@@ -1032,4 +836,265 @@ ul {
 .submenu a {
   color: var(--accent2);
   padding-top: 1rem;
+}
+
+/***************
+Media Queries
+***************/
+@media (max-width: 703px) {
+  .skillOptions {
+    flex-direction: column;
+  }
+  .frontend,
+  .backend {
+    width: 100%;
+  }
+  .backend {
+    margin-top: 1.5rem;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    align-items: flex-start;
+    margin-top: 2rem;
+  }
+  .hero > div:first-child {
+    width: 100%;
+  }
+  .hero-about {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+  }
+  .intro {
+    font-size: 7rem;
+    margin-left: -0.9rem;
+  }
+  .name {
+    align-items: left;
+  }
+  .iam,
+  .intro-kr {
+    font-size: 7rem;
+  }
+  .vert {
+    font-size: 0.95rem;
+  }
+  .vert-kr {
+    font-size: 2rem;
+  }
+  .me {
+    align-self: center;
+  }
+  .svg1 {
+    display: flex;
+    width: 70%;
+    transform: translate(0);
+    margin: 2rem 0;
+  }
+  .svg2,
+  .svg3,
+  .svg4,
+  .svg5 {
+    display: none;
+  }
+  form div {
+    width: 100%;
+  }
+  .intro-about {
+    font-size: 3rem;
+    margin: 2rem 1rem;
+  }
+  .desc-about {
+    font-size: 2rem;
+    margin: 0 1rem;
+    padding-bottom: 2rem;
+    color: var(--accent2);
+  }
+}
+@media (min-width: 704px) {
+  .svg1,
+  .svg2 {
+    display: flex;
+    width: 50%;
+    height: 50%;
+    align-self: center;
+    justify-self: center;
+  }
+  .svg3,
+  .svg4,
+  .svg5 {
+    display: none;
+  }
+  .intro {
+    font-size: 6rem;
+    margin-left: -0.8rem;
+  }
+  .intro-kr {
+    font-size: 5rem;
+  }
+  .vert {
+    font-size: 0.75rem;
+  }
+  .vert-kr {
+    font-size: 1.3rem;
+    transform: translate(1.3rem, -0.6rem);
+  }
+  .hero {
+    padding: 1rem;
+  }
+  .about-hero > div > h1 {
+    font-size: 3rem;
+  }
+  .blahblah p,
+  .project-title p,
+  .link,
+  .submenu p,
+  .submenu a {
+    font-size: 1.5rem;
+  }
+  .project-title > h2 {
+    font-size: 2rem;
+  }
+  .heart > p {
+    width: 70%;
+  }
+  .anime > p {
+    width: 70%;
+  }
+  .svg11 {
+    width: 30%;
+    padding: 0.5rem;
+  }
+  .svg12 {
+    width: 30%;
+    padding: 0.5rem;
+  }
+}
+@media (min-width: 820px) {
+  .heading {
+    margin-top: 3rem;
+  }
+  form div {
+    width: 80%;
+  }
+  .svg1,
+  .svg2,
+  .svg3 {
+    display: flex;
+    width: 50%;
+    height: 50%;
+    align-self: center;
+    justify-self: center;
+  }
+  .svg4,
+  .svg5 {
+    display: none;
+  }
+  .intro {
+    font-size: 6rem;
+  }
+  .intro-kr {
+    font-size: 7rem;
+  }
+  .vert-kr {
+    font-size: 1.7rem;
+    transform: translate(1.9rem, -0.9rem);
+  }
+  .hero {
+    padding: 1rem;
+  }
+  .heart > p {
+    width: 80%;
+  }
+  .anime > p {
+    width: 80%;
+  }
+  .svg11 {
+    width: 20%;
+    padding: 0.5rem;
+  }
+  .svg12 {
+    width: 20%;
+    padding: 0.5rem;
+  }
+  .accordion {
+    width: 60%;
+    margin: 2rem auto;
+  }
+}
+@media (min-width: 1150px) {
+  .svg1,
+  .svg2,
+  .svg3,
+  .svg4 {
+    display: flex;
+    width: 30%;
+    height: 50%;
+    align-self: center;
+    justify-self: center;
+  }
+  .svg5 {
+    display: none;
+  }
+  .intro {
+    font-size: 9rem;
+    transform: translateX(-0.5rem);
+  }
+  .vert {
+    font-size: 1.2rem;
+  }
+  .intro-kr {
+    font-size: 10rem;
+  }
+  .vert-kr {
+    font-size: 2.3rem;
+    transform: translate(2.8rem, -1.2rem);
+  }
+  .hero {
+    padding: 1rem;
+  }
+  .about-hero > div > h1 {
+    font-size: 4rem;
+  }
+  .blahblah p,
+  .project-title p,
+  .link,
+  .submenu p,
+  .submenu a {
+    font-size: 2rem;
+  }
+  .project-title > h2 {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 1350px) {
+  .svg1,
+  .svg2,
+  .svg3,
+  .svg4,
+  .svg5 {
+    display: flex;
+    width: 50%;
+    height: 50%;
+    align-self: center;
+    justify-self: center;
+  }
+  .intro {
+    font-size: 12rem;
+    transform: translateX(-1rem);
+  }
+  .vert {
+    font-size: 1.7rem;
+  }
+  .intro-kr {
+    font-size: 11rem;
+  }
+  .vert-kr {
+    font-size: 2.7rem;
+    transform: translate(2.9rem, -1.4rem);
+  }
+  .hero {
+    padding: 1rem;
+  }
 }
