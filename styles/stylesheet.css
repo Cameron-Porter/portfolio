@@ -1018,6 +1018,9 @@ Media Queries
     width: 20%;
     padding: 0.5rem;
   }
+  .blahblah {
+    margin-top: 2rem;
+  }
   .accordion {
     width: 60%;
     margin: 2rem auto;
@@ -1065,7 +1068,7 @@ Media Queries
   .link,
   .submenu p,
   .submenu a {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .project-title > h2 {
     font-size: 3rem;
