@@ -39,7 +39,8 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  font-family: "Nanum Myeongjo";
+  font-family: "Playfair Display";
+  font-display: swap;
 }
 
 /* A elements that don't have a class get default styles */
@@ -94,7 +95,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 16px;
-  font-family: "Nanum Myeongjo", serif;
+  font-family: "Playfair Display", "Nanum Myeongjo", serif;
 }
 
 .light-mode {
