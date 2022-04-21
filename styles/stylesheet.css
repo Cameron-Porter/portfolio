@@ -211,8 +211,8 @@ svg polygon {
 section > p:first-child {
   box-shadow: 0 0 5px black;
 }
-.hero > div > h2 {
-  font-size: 5rem;
+.iam {
+  font-size: 4.5rem;
   margin-top: 2rem;
   margin-bottom: -1rem;
 }
