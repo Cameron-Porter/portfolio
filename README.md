@@ -8,6 +8,14 @@
 - Improve upon my React skills.
 - Implement a call to action as well as a follow through.
 
+<h3> Some Design Inspiration </h3>
+For all pages, I grouped elements in accordance with Hick's Law. This allows for users to easily see what all is in relation to one another.
+
+Likewise, the Law of Proximity was utilize in both the Nav and Footer, as well as the Project menu. Each are grouped closely without additional clutter in order to make it easy for the user to understand their purpose.
+
+The Law of Similarity was implemented by use of the hexigonal SVG elements. I have one as part of a logo and used them to house photographs throughout. Though they are spread around, it establishes a sense of cohesion across the site.
+
+Though not expliciently intended, Miller's Law was established through the use of 7 distinct sections throughout the site. As most people can only remember about 7 things at any given time, I think adding too much more would be hindersome.
 
 <h3> Key Players in this Creation: </h3>
 
