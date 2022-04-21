@@ -398,7 +398,7 @@ video {
 .skillOptions p {
   color: var(--color1);
 }
-.skillOptions h6 {
+.skillOptions h5 {
   font-size: 1rem;
   color: var(--accent);
 }
