@@ -387,18 +387,18 @@ video {
   transform: translate(-0.25rem, -0.25rem);
   box-shadow: 4px 4px 0 var(--accent2);
 }
-.frontend h4,
-.backend h4 {
+.frontend h3,
+.backend h3 {
   font-size: 1.25rem;
   margin: 1rem;
 }
-.skillOptions h4 {
+.skillOptions h3 {
   color: var(--accent2);
 }
 .skillOptions p {
   color: var(--color1);
 }
-.skillOptions h5 {
+.skillOptions h4 {
   font-size: 1rem;
   color: var(--accent);
 }
