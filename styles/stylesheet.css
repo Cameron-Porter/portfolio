@@ -98,10 +98,10 @@ body {
 
 .light-mode {
   --primary: rgb(250, 249, 246);
-  --secondary: rgb(255, 255, 255);
-  --accent: rgba(92, 168, 255, 0.9);
-  --accent2: blue;
-  --accent3: rgb(0, 0, 0);
+  --secondary: rgb(204, 204, 204);
+  --accent: rgba(75, 138, 211, 0.9);
+  --accent2: rgb(69, 117, 221);
+  --accent3: rgb(0, 255, 0);
   --color1: rgb(0, 0, 0);
   --color2: rgb(255, 255, 255);
   --dayTime: linear-gradient(to right bottom, black, blue);
@@ -131,6 +131,8 @@ svg polygon {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-top: 0.5rem;
+  box-shadow: 2px 0 10px black;
+  border-radius: 0 0 8px 8px;
 }
 .logo svg {
   height: 5rem;
@@ -301,7 +303,7 @@ section > p:first-child {
   transform: translateY(5rem);
 }
 main svg {
-  filter: drop-shadow(2px 2px 10px black);
+  filter: drop-shadow(1px 1px 5px black);
 }
 /******************
        About
@@ -374,6 +376,7 @@ video {
   transition: 0.3s ease-in-out;
   border: 1px solid var(--accent);
   align-items: center;
+  border-radius: 8px;
 }
 .frontend:hover,
 .backend:hover,
@@ -637,7 +640,9 @@ video {
 /**********************************************
                  Contact Form
 **********************************************/
-
+.contact-body {
+  background-color: var(--secondary);
+}
 .heading {
   width: 100%;
   display: flex;
@@ -653,7 +658,35 @@ video {
   width: 40rem;
   margin-top: 2rem;
 }
-
+.contact-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.5rem;
+  box-shadow: 2px 0 10px black;
+  border-radius: 0 0 8px 8px;
+  background-color: var(--primary);
+}
+.contact-header > div > a,
+.navLinks a {
+  text-decoration: none;
+  color: var(--color1);
+  padding: 0.5rem;
+}
+.contact-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 0 15px black;
+  width: 60%;
+  margin: 4rem auto;
+  background-color: var(--primary);
+  border-radius: 8px;
+}
 form {
   display: flex;
   justify-content: center;
@@ -670,7 +703,7 @@ form div {
   flex-direction: column;
   justify-content: center;
   height: auto;
-  width: 60%;
+  width: 80%;
   padding: 10px;
 }
 form div label {
@@ -748,7 +781,15 @@ form div button {
   margin: 0 -0.5rem;
 }
 .blahblah {
-  margin: 1rem;
+  display: flex;
+  box-shadow: 0 0 15px black;
+  margin: 3rem auto;
+  padding: 1rem;
+  width: 90%;
+  border-radius: 8px;
+  justify-self: center;
+  align-self: center;
+  background-color: var(--primary);
 }
 .blahblah div {
   margin: 1rem 0;
@@ -777,7 +818,16 @@ form div button {
   padding: 0.5rem;
 }
 .projects {
-  margin: 1rem;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  flex-direction: column;
+  margin: 3rem auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px black;
+  width: 90%;
+  padding: 1rem;
+  background-color: var(--primary);
 }
 .project-title > p {
   margin-top: 1rem;
@@ -937,6 +987,9 @@ Media Queries
     padding-bottom: 2rem;
     color: var(--accent2);
   }
+  .contact-main {
+    width: 90%;
+  }
 }
 @media (min-width: 704px) {
   .svg1,
@@ -996,6 +1049,9 @@ Media Queries
     width: 30%;
     padding: 0.5rem;
   }
+  .contact-main {
+    width: 90%;
+  }
 }
 @media (min-width: 820px) {
   .heading {
@@ -1054,6 +1110,9 @@ Media Queries
   section {
     padding: 0 2rem;
   }
+  .contact-main {
+    width: 80%;
+  }
 }
 @media (min-width: 1150px) {
   .svg1,
@@ -1102,6 +1161,9 @@ Media Queries
   section {
     padding: 0 3rem;
   }
+  .contact-main {
+    width: 70%;
+  }
 }
 @media (min-width: 1350px) {
   .svg1,
@@ -1131,5 +1193,8 @@ Media Queries
   }
   .hero {
     padding: 1rem;
+  }
+  .contact-main {
+    width: 60%;
   }
 }
