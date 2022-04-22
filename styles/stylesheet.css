@@ -133,6 +133,7 @@ svg polygon {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-top: 0.5rem;
+  box-shadow: 2px 0 10px black;
   border-radius: 0 0 8px 8px;
 }
 .logo svg {
@@ -379,6 +380,7 @@ video {
 .frontend:active,
 .backend:active {
   transform: translate(-0.25rem, -0.25rem);
+  box-shadow: 4px 4px 0 var(--accent2);
 }
 .frontend h3,
 .backend h3 {
