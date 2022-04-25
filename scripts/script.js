@@ -3,13 +3,13 @@ function setTheme() {
   let theme = localStorage.getItem("theme");
   let element = document.getElementById("lightIcon");
   if (theme == null || theme == "dark") {
-    element.classList.remove("fa-moon");
-    element.classList.add("fa-sun");
+    element.classList.remove("fa-sun");
+    element.classList.add("fa-moon");
     localStorage.setItem("theme", "dark");
     e.classList.remove("light-mode");
   } else {
-    element.classList.remove("fa-sun");
-    element.classList.add("fa-moon");
+    element.classList.remove("fa-moon");
+    element.classList.add("fa-sun");
     localStorage.setItem("theme", "light");
     e.classList.add("light-mode");
   }
@@ -21,12 +21,12 @@ function lightMode() {
   let theme = localStorage.getItem("theme");
 
   if (theme == "dark") {
-    element.classList.remove("fa-sun");
-    element.classList.add("fa-moon");
+    element.classList.remove("fa-moon");
+    element.classList.add("fa-sun");
     localStorage.setItem("theme", "light");
   } else {
     element.classList.remove("fa-moon");
-    element.classList.add("fa-sun");
+    element.classList.add("fa-moon");
     localStorage.setItem("theme", "dark");
   }
   e.classList.toggle("light-mode");

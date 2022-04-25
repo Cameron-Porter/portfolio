@@ -81,33 +81,36 @@ select {
 /******************
       Custom
 ******************/
+
+/* Color Palette: https://colorpalettes.net/color-palette-4351/ */
 body {
-  --primary: rgb(79, 85, 91);
-  --secondary: rgb(43, 45, 47);
-  --accent: rgba(92, 168, 255, 0.7);
-  --accent2: rgb(255, 251, 0);
-  --accent3: orange;
-  --color1: rgb(255, 255, 255);
-  --color2: rgb(0, 0, 0);
-  --dayTime: linear-gradient(to right bottom, orange, yellow);
-  --moon: rgb(0, 0, 0);
-  background-color: var(--secondary);
+  --primary: #fef4e9;
+  --secondary: #435d6e;
+  --accent: #e7dbca;
+  --accent2: #57483b;
+  --accent3: #778b96;
+  --color1: white;
+  --color2: black;
+  --dayTime: linear-gradient(to right bottom, black, blue);
+  --moon: white;
+  background-color: var(--primary);
+  background-image: linear-gradient(var(--primary), var(--secondary));
   margin: 0;
   padding: 0;
   font-size: 16px;
-  font-family: "Playfair Display", "Nanum Myeongjo", serif;
+  font-family: "Playfair Display", serif;
 }
 
 .light-mode {
-  --primary: rgb(250, 249, 246);
-  --secondary: rgb(204, 204, 204);
-  --accent: rgba(75, 138, 211, 0.9);
-  --accent2: rgb(69, 117, 221);
-  --accent3: rgb(0, 255, 0);
+  --primary: #435d6e;
+  --secondary: #778b96;
+  --accent: #e7dbca;
+  --accent2: #fef4e9;
+  --accent3: #57483b;
   --color1: rgb(0, 0, 0);
   --color2: rgb(255, 255, 255);
-  --dayTime: linear-gradient(to right bottom, black, blue);
-  --moon: rgb(255, 255, 255);
+  --dayTime: linear-gradient(to right bottom, orange, yellow);
+  --moon: black;
 }
 h1,
 h2,
@@ -115,7 +118,7 @@ h3,
 h4,
 a,
 p {
-  color: var(--color1);
+  color: var(--color2);
 }
 svg text,
 svg polygon {
@@ -133,8 +136,8 @@ svg polygon {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-top: 0.5rem;
-  box-shadow: 2px 0 10px black;
   border-radius: 0 0 8px 8px;
+  box-shadow: 2px 2px 10px black;
 }
 .logo svg {
   height: 5rem;
@@ -153,7 +156,6 @@ svg polygon {
 .header > div > a,
 .navLinks a {
   text-decoration: none;
-  color: var(--color1);
   padding: 0.5rem;
 }
 .light {
@@ -177,7 +179,7 @@ svg polygon {
 }
 .navLinks a:hover {
   background-color: var(--accent);
-  color: var(--color2);
+
   border-radius: 0 30%;
 }
 #lightIcon {
@@ -194,6 +196,7 @@ svg polygon {
   align-items: center;
   width: 100%;
   height: 80vh;
+  padding: 2rem 4rem 4rem 4rem;
 }
 .hero > div:first-child {
   width: 60%;
@@ -201,7 +204,7 @@ svg polygon {
 }
 .preIntro {
   background-color: var(--accent);
-  color: var(--color2);
+  color: black;
   width: 8rem;
   padding: 3px;
   text-align: center;
@@ -221,35 +224,10 @@ svg polygon {
   writing-mode: vertical-lr;
   text-orientation: sideways-right;
   transform: rotate(0.5turn);
-  font-size: 1.3rem;
+  font-size: 6rem;
   margin-bottom: 0.4rem;
-  color: var(--accent2);
-  animation-name: flash;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
 }
-.vert-kr {
-  color: var(--accent2);
-  transform: translate(1.7rem, -1rem);
-  margin-left: -1.5rem;
-  animation-name: flash;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
-}
-@keyframes flash {
-  from {
-    text-shadow: 0 0 1px white;
-    text-shadow: 0 0 3px var(--accent2);
-  }
-  50% {
-    text-shadow: 0 0 5px white;
-    text-shadow: 0 0 10px var(--accent2);
-  }
-  to {
-    text-shadow: 0 0 1px white;
-    text-shadow: 0 0 3px var(--accent2);
-  }
-}
+
 .intro {
   font-size: 9rem;
   margin-left: -1.4rem;
@@ -264,23 +242,19 @@ svg polygon {
 .aboutButtons a {
   text-decoration: none;
 }
-.hangul {
-  color: var(--accent2);
-}
-.hangul:hover {
-  color: var(--accent);
-}
+
 .aboutButton {
   margin-left: 3rem;
   padding: 0.3rem;
   width: 110px;
   border-radius: 15px;
-  color: var(--color2);
-  background-color: var(--accent);
-  border: none;
+  color: var(--color1);
+  background-image: linear-gradient(to left, var(--accent), var(--accent2));
+  border: 1px solid var(--accent2);
 }
 .aboutButton:hover {
-  background-color: var(--accent2);
+  background-image: linear-gradient(to right, var(--accent), var(--accent2));
+  color: var(--color1);
 }
 
 .me {
@@ -306,13 +280,12 @@ svg polygon {
        About
 ******************/
 .about {
-  background-color: var(--primary);
   padding: 2rem 4rem 4rem 4rem;
 }
-#aboutMe p:first-child {
+.banner {
   margin-top: 2rem;
   background-color: var(--accent);
-  color: var(--color2);
+  color: black;
   width: 8rem;
   padding: 3px;
   text-align: center;
@@ -328,6 +301,9 @@ svg polygon {
 .aboutMeLink {
   color: var(--accent2);
 }
+.aboutMeLink:hover {
+  color: var(--accent);
+}
 .hero-about {
   margin-top: 3rem;
 }
@@ -339,18 +315,8 @@ video {
        Skills
 ******************/
 #skills {
-  background-color: var(--secondary);
   padding: 2rem 4rem 4rem 4rem;
   width: 100%;
-}
-#skills p:first-child {
-  margin-top: 2rem;
-  background-color: var(--accent);
-  color: var(--color2);
-  width: 9rem;
-  padding: 3px;
-  text-align: center;
-  border-radius: 0 30%;
 }
 #skills h2 {
   margin-top: 3rem;
@@ -369,18 +335,19 @@ video {
   flex-direction: column;
   width: 40%;
   padding: 1rem;
-  background-color: var(--primary);
+  background-color: var(--secondary);
   transition: 0.3s ease-in-out;
-  border: 1px solid var(--accent);
+  border: 1px solid var(--accent3);
   align-items: center;
   border-radius: 8px;
+  text-align: center;
 }
 .frontend:hover,
 .backend:hover,
-.frontend:active,
-.backend:active {
+.frontend:focus,
+.backend:focus {
   transform: translate(-0.25rem, -0.25rem);
-  box-shadow: 4px 4px 0 var(--accent2);
+  box-shadow: 4px 4px 5px var(--accent2);
 }
 .frontend h3,
 .backend h3 {
@@ -388,30 +355,21 @@ video {
   margin: 1rem;
 }
 .skillOptions h3 {
-  color: var(--accent2);
+  color: var(--accent);
 }
 .skillOptions p {
-  color: var(--color1);
+  color: white;
 }
 .skillOptions h4 {
   font-size: 1rem;
   color: var(--accent);
+  margin-top: 1rem;
 }
 /******************
        Work
 ******************/
 #work {
-  background-color: var(--primary);
   padding: 2rem 4rem 4rem 4rem;
-}
-#work p:first-child {
-  margin-top: 2rem;
-  background-color: var(--accent);
-  color: var(--color2);
-  width: 12rem;
-  padding: 3px;
-  text-align: center;
-  border-radius: 0 30%;
 }
 #work h2 {
   margin-top: 3rem;
@@ -451,7 +409,7 @@ video {
   width: 25px;
   height: 25px;
   right: -12.5px;
-  background-color: var(--secondary);
+  background-color: var(--accent2);
   border: 4px solid var(--accent);
   top: 15px;
   border-radius: 50%;
@@ -477,9 +435,9 @@ video {
   width: 0;
   z-index: 1;
   right: 30px;
-  border: medium solid var(--secondary);
+  border: medium solid var(--primary);
   border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent var(--secondary);
+  border-color: transparent transparent transparent var(--primary);
 }
 
 /* Add arrows to the right container (pointing left) */
@@ -491,9 +449,9 @@ video {
   width: 0;
   z-index: 1;
   left: 30px;
-  border: medium solid var(--secondary);
+  border: medium solid var(--primary);
   border-width: 10px 10px 10px 0;
-  border-color: transparent var(--secondary) transparent transparent;
+  border-color: transparent var(--primary) transparent transparent;
 }
 
 /* Fix the circle for containers on the right side */
@@ -504,7 +462,7 @@ video {
 /* The actual content */
 .content {
   padding: 20px 30px;
-  background-color: var(--secondary);
+  background-color: var(--primary);
   position: relative;
   border-radius: 6px;
 }
@@ -526,9 +484,9 @@ video {
   /* Make sure that all arrows are pointing leftwards */
   .container::before {
     left: 60px;
-    border: medium solid var(--secondary);
+    border: medium solid var(--primary);
     border-width: 10px 10px 10px 0;
-    border-color: transparent var(--secondary) transparent transparent;
+    border-color: transparent var(--primary) transparent transparent;
   }
 
   /* Make sure all circles are at the same spot */
@@ -547,28 +505,22 @@ video {
 ******************/
 
 #contact {
-  background-color: var(--secondary);
   padding: 2rem 4rem 4rem 4rem;
   width: 100%;
-}
-#contact > p:first-child {
-  margin-top: 2rem;
-  background-color: var(--accent);
-  color: var(--color2);
-  width: 9rem;
-  padding: 3px;
-  text-align: center;
-  border-radius: 0 30%;
 }
 #contact h2 {
   margin-top: 3rem;
   font-size: 2.75rem;
   margin-bottom: 2rem;
+  color: white;
 }
 .contactContent {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.contactContent p {
+  color: white;
 }
 
 .contactContent ul {
@@ -576,21 +528,24 @@ video {
   margin-bottom: 2rem;
 }
 .contactContent ul li {
-  color: var(--accent2);
+  color: white;
+  list-style-type: "⬢";
+  padding-left: 1rem;
 }
 .contactContent a {
   margin-top: 3rem;
   padding: 0.3rem;
   width: 110px;
   border-radius: 15px;
-  color: var(--color2);
-  background-color: var(--accent);
+  color: var(--color1);
+  background-image: linear-gradient(to left, var(--accent), var(--accent2));
   border: none;
   text-align: center;
   text-decoration: none;
+  box-shadow: 0 0 5px black;
 }
 .contactContent a:hover {
-  background-color: var(--accent2);
+  background-image: linear-gradient(to right, var(--accent), var(--accent2));
 }
 /******************
        Footer
@@ -599,7 +554,6 @@ video {
   display: flex;
   flex-direction: column;
   padding-bottom: 1rem;
-  background-color: var(--secondary);
   justify-content: center;
   align-items: center;
 }
@@ -627,19 +581,20 @@ video {
   stroke: var(--color1);
 }
 .socialIcons li a svg:hover {
-  stroke: var(--accent2);
+  stroke: var(--accent);
 }
 .footer div {
   margin-left: auto;
   margin-right: auto;
 }
+.copy {
+  color: white;
+}
 
 /**********************************************
                  Contact Form
 **********************************************/
-.contact-body {
-  background-color: var(--secondary);
-}
+
 .heading {
   width: 100%;
   display: flex;
@@ -665,11 +620,12 @@ video {
   padding-top: 0.5rem;
   border-radius: 0 0 8px 8px;
   background-color: var(--primary);
+  box-shadow: 2px 0 10px var(--accent2);
 }
 .contact-header > div > a,
 .navLinks a {
   text-decoration: none;
-  color: var(--color1);
+  color: var(--color2);
   padding: 0.5rem;
 }
 .contact-main {
@@ -702,7 +658,7 @@ form div {
   padding: 10px;
 }
 form div label {
-  color: var(--color1);
+  color: var(--color2);
   transform: translate(5px, 30px);
   transition: all 0.4s ease-in-out;
   font-size: 1.2rem;
@@ -717,8 +673,8 @@ form div textarea {
   margin-bottom: 15px;
   background-color: transparent;
   border: none;
-  border-bottom: 4px solid var(--accent2);
-  color: var(--color1);
+  border-bottom: 4px solid var(--accent);
+  color: var(--color2);
   z-index: 1;
 }
 form div input:focus,
@@ -731,12 +687,17 @@ form div button {
   width: 100px;
   border-radius: 15px;
   align-self: center;
-  color: var(--color2);
-  background-color: var(--accent);
+  color: var(--color1);
+  background-image: linear-gradient(to left, var(--accent), var(--accent2));
   border: none;
+  box-shadow: 0 0 5px black;
+}
+form div button:hover,
+form div button:focus {
+  background-image: linear-gradient(to right, var(--accent), var(--accent2));
 }
 .status {
-  color: var(--color1);
+  color: var(--color2);
   align-self: center;
   margin-top: 5px;
   text-align: center;
@@ -854,7 +815,7 @@ ul {
   cursor: pointer;
   display: block;
   padding: 1rem 1rem 1rem 3rem;
-  color: var(--accent2);
+  color: var(--accent);
   font-size: 1rem;
   font-weight: 700;
   border-bottom: 1px solid var(--color1);
@@ -873,7 +834,7 @@ ul {
   top: 1rem;
   left: 1rem;
   font-size: 1.2rem;
-  color: var(--accent2);
+  color: var(--accent);
   -webkit-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
   transition: all 0.4s ease;
@@ -885,11 +846,11 @@ ul {
 }
 
 .accordion li.open .link {
-  color: var(--accent3);
+  color: var(--color1);
 }
 
 .accordion li.open i {
-  color: var(--accent3);
+  color: var(--color1);
 }
 
 .accordion li.open i.fa-chevron-down {
@@ -905,13 +866,16 @@ ul {
 
 .submenu {
   display: none;
-  background: var(--primary);
+  background: var(--secondary);
   padding: 1rem;
   border: 1rem solid var(--secondary);
 }
 .submenu a {
-  color: var(--accent2);
   padding-top: 1rem;
+  color: var(--accent);
+}
+.submenu p {
+  color: white;
 }
 
 /***************
@@ -933,14 +897,9 @@ Media Queries
     flex-direction: column;
     height: auto;
     align-items: flex-start;
-    margin-top: 2rem;
   }
   .hero > div:first-child {
     width: 100%;
-  }
-  .hero-about {
-    margin-top: 4rem;
-    margin-bottom: 2rem;
   }
   .intro {
     font-size: 7rem;
@@ -949,15 +908,11 @@ Media Queries
   .name {
     align-items: left;
   }
-  .iam,
-  .intro-kr {
+  .iam {
     font-size: 7rem;
   }
   .vert {
-    font-size: 0.95rem;
-  }
-  .vert-kr {
-    font-size: 2rem;
+    font-size: 1rem;
   }
   .me {
     align-self: center;
@@ -1009,18 +964,8 @@ Media Queries
     font-size: 6rem;
     margin-left: -0.8rem;
   }
-  .intro-kr {
-    font-size: 5rem;
-  }
   .vert {
-    font-size: 0.75rem;
-  }
-  .vert-kr {
-    font-size: 1.3rem;
-    transform: translate(1.3rem, -0.6rem);
-  }
-  .hero {
-    padding: 1rem;
+    font-size: 0.9rem;
   }
   .about-hero > div > h1 {
     font-size: 3rem;
@@ -1076,15 +1021,8 @@ Media Queries
   .intro {
     font-size: 6rem;
   }
-  .intro-kr {
-    font-size: 7rem;
-  }
-  .vert-kr {
-    font-size: 1.7rem;
-    transform: translate(1.9rem, -0.9rem);
-  }
-  .hero {
-    padding: 1rem;
+  .vert {
+    font-size: 0.9rem;
   }
   .heart > p {
     width: 80%;
@@ -1133,17 +1071,7 @@ Media Queries
     transform: translateX(-0.5rem);
   }
   .vert {
-    font-size: 1.2rem;
-  }
-  .intro-kr {
-    font-size: 10rem;
-  }
-  .vert-kr {
-    font-size: 2.3rem;
-    transform: translate(2.8rem, -1.2rem);
-  }
-  .hero {
-    padding: 1rem;
+    font-size: 1.4rem;
   }
   .about-hero > div > h1 {
     font-size: 4rem;
@@ -1182,19 +1110,12 @@ Media Queries
     transform: translateX(-1rem);
   }
   .vert {
-    font-size: 1.7rem;
-  }
-  .intro-kr {
-    font-size: 11rem;
-  }
-  .vert-kr {
-    font-size: 2.7rem;
-    transform: translate(2.9rem, -1.4rem);
-  }
-  .hero {
-    padding: 1rem;
+    font-size: 1.8rem;
   }
   .contact-main {
     width: 60%;
+  }
+  .hero {
+    padding: 6rem 4rem 4rem 4rem;
   }
 }

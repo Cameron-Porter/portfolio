@@ -112,7 +112,7 @@
 
             <label id="messageLabel" for="message">Message</label>
             <textarea class="textarea" id="message" rows="3"></textarea>
-            <button onclick="validateForm()" type="button" class="">
+            <button onclick="validateForm()" type="button" tabindex="0">
               <strong>Send</strong>
             </button>
             <div class="status"></div>
@@ -173,7 +173,7 @@
           </li>
         </ul>
         <div>
-          <p>Copyright © 2022 Cameron Porter</p>
+          <p class="copy">Copyright © 2022 Cameron Porter</p>
         </div>
       </footer>
     </div>
@@ -187,6 +187,15 @@
         $("#emailLabel").addClass("is-active");
       });
       $("#message").on("mousedown", function () {
+        $("#messageLabel").addClass("is-active");
+      });
+      $("#name").on("focus", function () {
+        $("#nameLabel").addClass("is-active");
+      });
+      $("#email").on("focus", function () {
+        $("#emailLabel").addClass("is-active");
+      });
+      $("#message").on("focus", function () {
         $("#messageLabel").addClass("is-active");
       });
     </script>
