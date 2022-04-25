@@ -179,7 +179,7 @@ svg polygon {
 }
 .navLinks a:hover {
   background-color: var(--accent);
-
+  color: black;
   border-radius: 0 30%;
 }
 #lightIcon {
