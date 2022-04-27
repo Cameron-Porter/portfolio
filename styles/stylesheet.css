@@ -93,12 +93,7 @@ body {
   --color2: black;
   --dayTime: linear-gradient(to right bottom, black, blue);
   --moon: white;
-  background-color: var(--primary);
-  background-image: linear-gradient(var(--primary), var(--secondary));
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  font-family: "Playfair Display", serif;
+  background: linear-gradient(var(--primary), var(--accent3));
 }
 
 .light-mode {
@@ -124,7 +119,17 @@ svg text,
 svg polygon {
   stroke: var(--accent2);
 }
-
+@keyframes animatedBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 /******************
         Nav
 ******************/
@@ -275,7 +280,29 @@ svg polygon {
 .svg5 {
   transform: translateY(5rem);
 }
-
+.scanner:before {
+  content: " Cameron ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 85%;
+  height: 0%;
+  border-bottom: 1px solid var(--accent);
+  overflow: hidden;
+  color: var(--accent);
+  animation: load 4s linear infinite;
+}
+@keyframes load {
+  0%,
+  10%,
+  100% {
+    height: 0;
+  }
+  60%,
+  80% {
+    height: 100%;
+  }
+}
 /******************
        About
 ******************/
@@ -492,7 +519,7 @@ video {
   /* Make sure all circles are at the same spot */
   .left::after,
   .right::after {
-    left: 15px;
+    left: 18px;
   }
 
   /* Make all right containers behave like the left ones */
@@ -578,7 +605,7 @@ video {
   margin: 0 3rem;
 }
 .socialIcons li a svg {
-  stroke: var(--color1);
+  stroke: white;
 }
 .socialIcons li a svg:hover {
   stroke: var(--accent);
@@ -897,6 +924,7 @@ Media Queries
     flex-direction: column;
     height: auto;
     align-items: flex-start;
+    padding-left: 1rem;
   }
   .hero > div:first-child {
     width: 100%;
