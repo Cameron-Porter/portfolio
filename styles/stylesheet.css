@@ -175,14 +175,17 @@ svg polygon {
   align-items: center;
   box-shadow: 1px 1px 5px black;
 }
-.logo > svg > text:hover {
+.logo > svg > text:hover,
+.logo > svg > text:focus {
   stroke: var(--color2);
   fill: var(--color2);
 }
-.logo > svg > polygon:hover {
+.logo > svg > polygon:hover,
+.logo > svg > polygon:focus {
   stroke: var(--accent3);
 }
-.navLinks a:hover {
+.navLinks a:hover,
+.navLinks a:focus {
   background-color: var(--accent);
   color: black;
   border-radius: 0 30%;
@@ -257,7 +260,8 @@ svg polygon {
   background-image: linear-gradient(to left, var(--accent), var(--accent2));
   border: 1px solid var(--accent2);
 }
-.aboutButton:hover {
+.aboutButton:hover,
+.aboutButton:focus {
   background-image: linear-gradient(to right, var(--accent), var(--accent2));
   color: var(--color1);
 }
@@ -328,7 +332,8 @@ svg polygon {
 .aboutMeLink {
   color: var(--accent2);
 }
-.aboutMeLink:hover {
+.aboutMeLink:hover,
+.aboutMeLink:focus {
   color: var(--accent);
 }
 .hero-about {
@@ -571,7 +576,8 @@ video {
   text-decoration: none;
   box-shadow: 0 0 5px black;
 }
-.contactContent a:hover {
+.contactContent a:hover,
+.contactContent a:focus {
   background-image: linear-gradient(to right, var(--accent), var(--accent2));
 }
 /******************
@@ -612,7 +618,8 @@ video {
   text-decoration: none;
 }
 
-.socialIcons li a i:hover {
+.socialIcons li a i:hover,
+.socialIcons li a i:focus {
   color: var(--accent);
 }
 .footer div {
