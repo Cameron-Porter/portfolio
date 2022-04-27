@@ -330,11 +330,11 @@ svg polygon {
   font-size: 2.75rem;
 }
 .aboutMeLink {
-  color: var(--accent2);
+  color: red;
 }
 .aboutMeLink:hover,
 .aboutMeLink:focus {
-  color: var(--accent);
+  color: var(--accent2);
 }
 .hero-about {
   margin-top: 3rem;
