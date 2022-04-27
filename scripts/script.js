@@ -1,35 +1,34 @@
 function setTheme() {
   let e = document.body;
   let theme = localStorage.getItem("theme");
-  let element = document.getElementById("lightIcon");
-  if (theme == null || theme == "dark") {
-    element.classList.remove("fa-sun");
-    element.classList.add("fa-moon");
-    localStorage.setItem("theme", "dark");
-    e.classList.remove("light-mode");
-  } else {
-    element.classList.remove("fa-moon");
-    element.classList.add("fa-sun");
+  let element = document.getElementById("darkIcon");
+  if (theme == null || theme == "light") {
+    element.classList.remove("ri-sun-line");
+    element.classList.add("ri-moon-line");
     localStorage.setItem("theme", "light");
-    e.classList.add("light-mode");
+  } else {
+    element.classList.remove("ri-moon-line");
+    element.classList.add("ri-sun-line");
+    localStorage.setItem("theme", "dark");
+    e.classList.add("dark-mode");
   }
 }
 
-function lightMode() {
+function darkMode() {
   let e = document.body;
-  let element = document.getElementById("lightIcon");
+  let element = document.getElementById("darkIcon");
   let theme = localStorage.getItem("theme");
 
-  if (theme == "dark") {
-    element.classList.remove("fa-moon");
-    element.classList.add("fa-sun");
-    localStorage.setItem("theme", "light");
-  } else {
-    element.classList.remove("fa-moon");
-    element.classList.add("fa-moon");
+  if (theme == "light") {
+    element.classList.remove("ri-moon-line");
+    element.classList.add("ri-sun-line");
     localStorage.setItem("theme", "dark");
+  } else {
+    element.classList.remove("ri-sun-line");
+    element.classList.add("ri-moon-line");
+    localStorage.setItem("theme", "light");
   }
-  e.classList.toggle("light-mode");
+  e.classList.toggle("dark-mode");
 }
 
 function validateForm() {

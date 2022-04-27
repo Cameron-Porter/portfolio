@@ -96,7 +96,7 @@ body {
   background: linear-gradient(var(--primary), var(--accent3));
 }
 
-.light-mode {
+.dark-mode {
   --primary: #435d6e;
   --secondary: #778b96;
   --accent: #e7dbca;
@@ -187,7 +187,7 @@ svg polygon {
   color: black;
   border-radius: 0 30%;
 }
-#lightIcon {
+#darkIcon {
   color: var(--moon);
 }
 /******************
@@ -596,19 +596,24 @@ video {
   flex-direction: row;
   width: 400px;
   padding-left: 0;
+  margin-bottom: 0;
 }
 .socialIcons li {
   display: inline-block;
-  height: 2rem;
-  width: 2rem;
   list-style: none;
   margin: 0 3rem;
 }
-.socialIcons li a svg {
-  stroke: white;
+.socialIcons li a {
+  text-decoration: none;
 }
-.socialIcons li a svg:hover {
-  stroke: var(--accent);
+.socialIcons li a i {
+  color: white;
+  font-size: 3rem;
+  text-decoration: none;
+}
+
+.socialIcons li a i:hover {
+  color: var(--accent);
 }
 .footer div {
   margin-left: auto;
